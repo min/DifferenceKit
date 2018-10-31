@@ -112,10 +112,6 @@ public extension UITableView {
                 }
             }
         }
-
-        if contentSize.height > bounds.size.height {
-            setContentOffset(contentOffset, animated: false)
-        }
     }
 
     private func _performBatchUpdates(_ updates: () -> Void) {
@@ -195,10 +191,6 @@ public extension UICollectionView {
                     moveItem(at: IndexPath(item: source.element, section: source.section), to: IndexPath(item: target.element, section: target.section))
                 }
             })
-        }
-
-        if contentSize.height > bounds.size.height {
-            setContentOffset(contentOffset, animated: false)
         }
     }
 }
